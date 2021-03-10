@@ -133,10 +133,10 @@ class ReplaceComponentRenderer extends React.Component {
   }
 }
 
-const replaceComponentRenderer = ({ props }, pluginOptions) => {
+const wrapPageElement = ({ props }, pluginOptions) => {
   const { modalComponentPath, modalProps } = pluginOptions
   const mergedProps = { ...props, modalComponentPath, modalProps }
   return React.createElement(ReplaceComponentRenderer, mergedProps)
 }
 
-export default replaceComponentRenderer
+export default wrapPageElement
