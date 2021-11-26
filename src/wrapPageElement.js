@@ -68,7 +68,7 @@ class ReplaceComponentRenderer extends React.Component {
     if (!this.props.modalComponentPath) return;
 
     // Access the component we loaded in gatsby-node.js
-    const ModalComponent = require(___MODAL_COMPONENT___).default
+    const ModalComponent = require(/* webpackIgnore: true */___MODAL_COMPONENT___).default
     this.setState({ ModalComponent })
   }
 
